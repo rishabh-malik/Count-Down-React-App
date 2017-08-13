@@ -2,11 +2,20 @@
 import React, { Component } from 'react';
 import './App.css';
 class App extends Component {
+        //adding states
+        constructor(props){
+        super(props);
+        //in react states are objects which are key value pairs
+        this.state={
+            deadline:'December 25, 2017'
+        }    
+        }
+
     render() {
         return(
         //className is keyword used 
         <div className="App">
-            <div className="App-title">Countdown to December 25, 2017</div>
+            <div className="App-title">Countdown to {this.state.deadline}</div>
              <div>
                  <div className="Clock-days">14 days</div>
                  <div className="Clock-hours">10 hourss</div>
