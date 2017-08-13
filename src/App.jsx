@@ -1,6 +1,8 @@
 //a react component - reuseable piece of UI
 import React, { Component } from 'react';
 import './App.css';
+import Clock from './Clock'
+
 class App extends Component {
         //adding states
         constructor(props){
@@ -23,12 +25,8 @@ class App extends Component {
         //className is keyword used 
         <div className="App">
             <div className="App-title">Countdown to {this.state.deadline}</div>
-             <div>
-                 <div className="Clock-days">14 days</div>
-                 <div className="Clock-hours">10 hourss</div>
-                 <div className="Clock-minutes">15 minutes</div>
-                 <div className="Clock-seconds">20 seconds</div>
-             </div>  
+          
+            <Clock/>
              <div> 
              <input placeholder='new date'
              onChange={event=>this.setState({newDeadLine:event.target.value})}
